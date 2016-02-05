@@ -1,0 +1,77 @@
+/* point logo id to the image on our UX server */
+#logo { background-image: url("http://www.premeraux.com/img/logo_pbc.png") !important; }
+/* recoded sidebar styles so we don't have to work with the nested div canyon */
+#content-promotional { font-size: 85%; }
+#content-promotional > div {
+  padding: 12px;
+  border-top: 5px solid;
+  margin-bottom: 20px; }
+#content-promotional > div:first-child  { border-top-color: #006bb7; }
+#content-promotional > div:nth-child(2) { border-top-color: #f2ce30; }
+#content-promotional > div:nth-child(3) { border-top-color: #92b638; }
+/* ==================== ^^^ unrelated to component ^^^ =================== */
+
+
+
+/* NEW - panel-link
+    This component's purpose is to link to pages with some interactive element
+    (e.g., Find a Doctor tool, or Bill Pay page). It can be used with images or
+    icon-fonts, and its entire surface area will be a clickable link.
+    If no explicit link is needed, it can be used with an <a> tag with no text
+    content.
+
+    USAGE:
+        <div class="panel-link">
+          <img src="..." alt="...">
+          <h3>...</h3>
+          <p....</p>
+          <a href="#">...</a>
+        </div>
+
+    This class is stand-alone and not designed to work with any modifier classes.
+*/
+.panel-link {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  transition: transform .2s ease-out; }
+  .panel-link:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transform: translateY(-3px); }
+  .panel-link:active { background-color: #fafafa; }
+  .panel-link img { width: 48px; }
+  .panel-link a:before {
+    content: " ";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0; }
+
+
+/* UPDATE - footer
+    Updates to current footer styles
+*/
+#footer {
+  
+  padding: 0; }
+  #footer > .row {
+    margin: 0;
+    padding: 16px; }
+
+.footer-sitemap { background-color: #1d374b; }
+  .footer-sitemap h3 { color: #7dcdf1; font-weight: bold; }
+  .footer-sitemap a { color: #fff; }
+  .footer-sitemap li {
+    line-height: 1.2;
+    margin-bottom: 16px; }
+
+.footer-social-links a {
+  color: #666;
+  margin-right: 8px; }
+  .footer-social-links a:last-child { margin-right: 0; }
+  .footer-social-links a:hover { text-decoration: none; }
+  .footer-social-links .icon-large { transition: color .2s; }
+  .footer-social-links .icon-facebook:hover { color: #3B5998; }
+  .footer-social-links .icon-twitter:hover  { color: #4099FF; }
+  .footer-social-links .icon-youtube2:hover { color: #E52D27; }
+  .footer-social-links .icon-bubbles:hover  { color: #009BDA; }
